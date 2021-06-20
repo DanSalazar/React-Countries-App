@@ -50,12 +50,12 @@ export const CountryDetails = styled.div`
     }
 
     h3  {
-        font-weight: 300;
+        font-weight: 600;
         font-size: 1em;
     }
 
     @media screen and (min-width: 1024px){
-        margin:  0 0 0 4em;
+        margin:  0 0 0 2.5em;
         grid-column: 3/5;
         align-self: center;
 

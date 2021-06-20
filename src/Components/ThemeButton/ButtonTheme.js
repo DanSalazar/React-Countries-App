@@ -3,7 +3,7 @@ import { ThemeContext } from 'styled-components';
 import {ThemeHandler} from './style';
 
 function ButtonTheme() {
-    const { isLight, setLight }= useContext(ThemeContext);
+    const { isLight, setLight } = useContext(ThemeContext);
 
     const handleTheme = () => {
         setLight(!isLight);
