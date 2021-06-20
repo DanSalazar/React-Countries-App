@@ -5,7 +5,7 @@ function Country({svg, name, region, capital, population}) {
 
     return (
         <CountryCard>
-            <CountryFlag loading="lazy" alt="Flag" src={svg}/>
+            <CountryFlag alt="Flag" src={svg}/>
             <CountryBody>
                 <h4> {name} </h4>
                 <p> Population: <span> {parseFloat(population)} </span> </p>
