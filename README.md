@@ -32,7 +32,7 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@DanSalazar](https://www.frontendmentor.io/profile/@DanSalazar)
-- Twitter - [@yourusername](https://www.twitter.com/Danann26)
+- Twitter - [@Danann26](https://www.twitter.com/Danann26)
 
 # Getting Started with Create React App
 
