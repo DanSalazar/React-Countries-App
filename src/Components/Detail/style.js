@@ -1,15 +1,21 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const ButtonDetail = styled.button`
+const buttonStyles = `
     width: 90px;
     font-family: 'Nunito Sans', sans-serif;
     padding: 0.5em 0;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 8px 0px hsla(0, 0%, 0%, 0.1);
-    background: ${props => props.theme.isLight ? 'hsl(0, 0%, 100%)': 'hsl(209, 23%, 22%)'};
     font-size: 0.75em;
+    cursor: pointer;
+`
+
+export const ButtonDetail = styled.button`
+    ${buttonStyles};
     color: ${props => props.theme.isLight ? 'hsl(200, 15%, 8%)': 'hsl(0, 0%, 100%)'};
+    background: ${props => props.theme.isLight ? 'hsl(0, 0%, 100%)': 'hsl(209, 23%, 22%)'};
 
     i {
         margin: 0 4px 0 0%;
@@ -76,10 +82,11 @@ export const CountryDetailsInfo  = styled.div`
     p {
         font-size: 0.875em;
         margin: 0.75em 0;
+        font-weight: 600;
     }
 
-    b {
-        font-weight: 600;
+    span {
+        font-weight: 300;
     }
 
     @media screen and (min-width: 1024px){
@@ -114,25 +121,26 @@ export const Flag = styled.img`
     }
 
 `
-export const Borders = styled.div`
-    background: ${props => props.theme.isLight ? 'hsl(0, 0%, 100%)': 'hsl(209, 23%, 22%)'};
-    box-shadow: 0px 4px 8px 0px hsla(0, 0%, 0%, 0.1);
-    margin: 0.5em 0.75em 0 0;
-    width: 4.375em;
-    height: 1.5em;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    p {
-        font-size: 0.75em;
-    }
-
-`
 
 export const SpinnerContainer = styled.div`
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+`
+
+export const AncleDetail =  styled(Link)`${buttonStyles}
+    text-decoration: none;
+    color: ${props => props.theme.isLight ? 'hsl(200, 15%, 8%)': 'hsl(0, 0%, 100%)'};
+    margin: 0.5em 1em 0 0;
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    background: ${props => props.theme.isLight ? 'hsl(0, 0%, 100%)': 'hsl(209, 23%, 22%)'};
+`
+export const NotFound = styled.h2`
+    text-align: center;
+    height: 23.75em;
+    font-size: 1.75em;
+    color: ${props => props.theme.isLight ? 'hsl(200, 15%, 8%)': 'hsl(0, 0%, 100%)'};
 `
