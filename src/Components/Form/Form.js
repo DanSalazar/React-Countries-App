@@ -19,10 +19,14 @@ function Form({ handleNameChange, handleRegionChange }) {
             <Icon className="fas fa-search" />
                 <InputSearch 
                     onChange={handleNameChange} 
-                    type="text" 
+                    type="text"
+                    name="search"
+                    title="undefined"
+                    aria-label="undefined" 
                     placeholder="Search for a country..."/>
             </InputContainer>
             <Dropdown handleRegionChange={handleRegionChange} />
+            
         </FormContainer>
     )
 }

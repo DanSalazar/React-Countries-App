@@ -7,7 +7,7 @@ function CountriesContainer( { countries} ) {
     return (
         <Countries>
                 {
-                    countries.map(country => <Ancle key={country.numericCode} to={`/${country.name}`}>
+                    countries.map(country => <Ancle key={country.numericCode} to={'/' + country.name}>
                         <Country
                             svg={country.flag}
                             name={country.name}

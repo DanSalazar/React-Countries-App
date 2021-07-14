@@ -68,9 +68,6 @@ export const CountryDetails = styled.div`
     @media screen and (min-width: 1280px){
         margin:  0 0 0 6em;
     }
-
-    
-
 `
 
 export const CountryDetailsInfo  = styled.div`
