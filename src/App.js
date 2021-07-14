@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
+} from 'react-router-dom';
 import Nav from './Components/Nav/Nav'
 import { CountryProvider } from './CountriesContext/countryContext'
 import Home from './Pages/Home/index';
