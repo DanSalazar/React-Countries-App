@@ -48,3 +48,4 @@ export const Icon = styled.i`
     margin: 0 1.25em 0 0.5em;
     font-size: 0.875em;
 `
+

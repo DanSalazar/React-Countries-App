@@ -6,6 +6,11 @@ export const CountryCard = styled.div`
     border-radius: 6px;
     overflow: hidden;
     background: ${props => props.theme.isLight ? 'hsl(0, 0%, 100%)': 'hsl(209, 23%, 22%)'};
+
+    @media screen and (min-width: 768px){
+        width: auto;
+    }
+
 `
 
 export const CountryFlag = styled.img`
@@ -15,7 +20,7 @@ export const CountryFlag = styled.img`
 `
 
 export const CountryBody = styled.div`
-    padding: 1em 1.5em 2em 1.5em;
+    padding: 1em 1.25em 2em 1.25em;
     color: ${props => props.theme.isLight ? 'hsl(200, 15%, 8%)': 'hsl(0, 0%, 100%)'};
     text-align: start;
 
