@@ -1,1 +1,1 @@
-export const API_KEY = `https://restcountries.eu/rest/v2/`
+export const API_KEY = `https://restcountries.com/v3.1/`
