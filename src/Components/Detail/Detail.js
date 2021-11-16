@@ -9,7 +9,7 @@ import {
   DetailContainer,
   SpinnerContainer,
   Flag,
-  AncleDetail
+  AncleDetail,
 } from './style'
 
 function DetailCountry() {
@@ -67,10 +67,14 @@ function DetailCountry() {
                   Top Level Domain: <span> {item.tld[0]} </span>
                 </p>
                 <p>
-                  Currencies: <span> {Object.values(item.currencies)[0].name } </span>
+                  Currencies:{' '}
+                  <span> {Object.values(item.currencies)[0].name} </span>
                 </p>
                 <p>
-                  Languages: <span>{Object.values(item.languages).map(item => item + ' ') }</span>
+                  Languages:{' '}
+                  <span>
+                    {Object.values(item.languages).map((item) => item + ' ')}
+                  </span>
                 </p>
               </div>
             </CountryDetailsInfo>
