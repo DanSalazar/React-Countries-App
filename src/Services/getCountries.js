@@ -1,11 +1,11 @@
-import { API_KEY } from "./apiKey";
+import axios from 'axios'
+const endpoint = `https://restcountries.com/v3.1/`
 
-export default async function getCountries(){
+export default async function getCountries () {
    try {
-        let data = await fetch(`${API_KEY}all`);
-        const json = await data.json();
-        return json;
+     const { data } = await axios(`${endpoint}all`)
+     return data
    } catch (error) {
-       console.log(error);
+     throw new Error(error)
    }
 }
