@@ -25,13 +25,13 @@ function Home() {
   const filter = countriesFilter(countries, name, region)
 
   return (
-      <AppContainer>
-        <Form
-          handleNameChange={handleNameChange} 
-          handleRegionChange={handleRegionChange} 
-        />
-        <CountriesContainer countries={filter}/>
-      </AppContainer>
+    <AppContainer>
+      <Form
+        handleNameChange={handleNameChange}
+        handleRegionChange={handleRegionChange}
+      />
+      <CountriesContainer countries={filter} />
+    </AppContainer>
   )
 }
 
