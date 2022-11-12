@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { layoutWidthSpacing } from '../../Pages/Home/style'
 
 export const HeaderStyled = styled.header`
   min-width: 100%;
@@ -15,10 +16,10 @@ export const HeaderStyled = styled.header`
   box-shadow: 0px 4px 8px 0px hsla(0, 0%, 0%, 0.1);
 
   p {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
 
   @media screen and (min-width: 768px) {
-    padding: 0 4.25em;
+    padding: 0 ${layoutWidthSpacing};
   }
 `

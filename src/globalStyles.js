@@ -17,6 +17,10 @@ export const GlobalStyles = createGlobalStyle`
         props.theme.isLight ? 'hsl(0, 0%, 98%)' : 'hsl(207, 26%, 17%)'};
       font-size: 16px;
 
+      @media screen and (max-width: 320px) {
+        font-size: 14px;
+      }
+
       @media screen and (min-width: 1024px){
           font-size: 18px;
       }
@@ -24,6 +28,5 @@ export const GlobalStyles = createGlobalStyle`
       @media screen and (min-width: 1800px){
           font-size: 25px;
       }
-
   }
 `

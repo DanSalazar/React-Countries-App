@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Countries = styled.div`
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
   gap: 2.5rem;
   justify-content: center;
 

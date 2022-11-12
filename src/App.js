@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Nav from './Components/Nav/Nav'
+import Header from './Components/Header'
 import Home from './Pages/Home/index'
 import Detail from './Pages/Detail/index'
 import { GlobalStyles } from './globalStyles'
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <ThemeProvider theme={{ isLight, setLight }}>
         <GlobalStyles />
-        <Nav />
+        <Header />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/:name' component={Detail} />
