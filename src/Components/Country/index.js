@@ -3,7 +3,7 @@ import { CountryFlag, CountryCard, CountryBody } from './style'
 function Country({ svg, name, region, capital, population }) {
   return (
     <CountryCard>
-      <CountryFlag alt='Flag' src={svg} />
+      <CountryFlag alt='Flag' src={svg} loading='lazy' />
       <CountryBody>
         <h4>{name}</h4>
         <p>

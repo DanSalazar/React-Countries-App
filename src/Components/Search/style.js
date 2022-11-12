@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FormContainer = styled.form`
+export const SearchContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,10 @@ export const InputContainer = styled.div`
     props.theme.isLight ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)'};
   border-radius: 4px;
   align-items: center;
-  box-shadow: 1px 1px 5px 0px hsla(0, 0%, 0%, 0.1);
+  gap: 12px;
+  box-shadow: 0 0 8px hsla(0, 0%, 0%, 0.05);
+  color: ${(props) =>
+    props.theme.isLight ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)'};
 
   @media screen and (min-width: 768px) {
     width: 40%;

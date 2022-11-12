@@ -1,29 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
-const buttonStyles = `
-    width: 90px;
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 0.5em 0;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 8px 0px hsla(0, 0%, 0%, 0.1);
-    font-size: 0.75em;
-    cursor: pointer;
-`
-
-export const ButtonDetail = styled.button`
-  ${buttonStyles};
-  color: ${(props) =>
-    props.theme.isLight ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)'};
-  background: ${(props) =>
-    props.theme.isLight ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)'};
-
-  i {
-    margin: 0 4px 0 0%;
-    font-size: 0.5em;
-  }
-`
+import { detailButtonStyles } from '../../Pages/Detail/style'
 
 export const DetailContainer = styled.div`
   display: flex;
@@ -97,11 +74,11 @@ export const CountryDetailsInfo = styled.div`
 `
 
 export const Flag = styled.img`
-  max-width: 100%;
   max-height: 15.625em;
   height: auto;
   margin: 2em 0;
   align-self: center;
+  object-fit: cover;
 
   @media screen and (min-width: 1024px) {
     grid-column: 1/3;
@@ -110,8 +87,7 @@ export const Flag = styled.img`
   }
 
   @media screen and (min-width: 1280px) {
-    min-height: 90%;
-    width: 100%;
+    min-height: 70%;
   }
 `
 
@@ -123,7 +99,7 @@ export const SpinnerContainer = styled.div`
 `
 
 export const AncleDetail = styled(Link)`
-  ${buttonStyles}
+  ${detailButtonStyles}
   text-decoration: none;
   color: ${(props) =>
     props.theme.isLight ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)'};
@@ -134,10 +110,10 @@ export const AncleDetail = styled(Link)`
   background: ${(props) =>
     props.theme.isLight ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)'};
 `
-export const NotFound = styled.h2`
+
+export const CountryNotFound = styled.h2`
   text-align: center;
-  height: 23.75em;
-  font-size: 1.75em;
+  font-size: 1.5rem;
   color: ${(props) =>
     props.theme.isLight ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)'};
 `

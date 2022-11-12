@@ -1,14 +1,14 @@
-import React from 'react'
 import ButtonTheme from '../ThemeButton/ButtonTheme'
-import { NavStyled } from './style'
+import { HeaderStyled } from './style'
+import { A } from '../commons/styles'
 
-function Nav() {
+function Header() {
   return (
-    <NavStyled>
-      <p> Where in the world? </p>
+    <HeaderStyled>
+      <A to='/'>Where in the world</A>
       <ButtonTheme />
-    </NavStyled>
+    </HeaderStyled>
   )
 }
 
-export default Nav
+export default Header

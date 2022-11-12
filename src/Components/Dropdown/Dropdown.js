@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { DownIcon } from '../commons/icons'
 import {
   DropDownContainer,
   DropDownHeader,
@@ -11,11 +12,9 @@ const options = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
 function Dropdown({ handleRegionChange }) {
   const [isOpen, setIsOpen] = useState(false)
-
-  const toggler = () => {
-    setIsOpen(!isOpen)
-  }
   const [selectOption, setSelectOption] = useState(null)
+
+  const toggler = () => setIsOpen(!isOpen)
 
   const handlerOption = (value) => () => {
     setSelectOption(value)
@@ -26,8 +25,8 @@ function Dropdown({ handleRegionChange }) {
   return (
     <DropDownContainer>
       <DropDownHeader onClick={toggler}>
-        <span>{selectOption || 'Filter by Region'} </span>{' '}
-        <i className='fas fa-chevron-down' />
+        <span>{selectOption || 'Filter by Region'}</span>
+        <DownIcon/>
       </DropDownHeader>
       {isOpen && (
         <DropDownListContainer>

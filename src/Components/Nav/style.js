@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NavStyled = styled.nav`
+export const HeaderStyled = styled.header`
   min-width: 100%;
   background: ${(props) =>
     props.theme.isLight ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)'};

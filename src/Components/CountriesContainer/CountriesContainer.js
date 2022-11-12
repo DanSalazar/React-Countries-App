@@ -1,12 +1,13 @@
-import React from 'react'
-import { Countries, Ancle } from './style'
-import Country from '../Country/Country'
+import { memo } from 'react'
+import { Countries } from './style'
+import Country from '../Country'
+import { A } from '../commons/styles'
 
 function CountriesContainer({ countries }) {
   return (
     <Countries>
       {countries.map((country, id) => (
-        <Ancle key={id} to={'/' + country.name.official}>
+        <A key={id} to={'/' + country.name.common.toLowerCase()}>
           <Country
             svg={country.flags.png}
             name={country.name.official}
@@ -14,10 +15,10 @@ function CountriesContainer({ countries }) {
             capital={country.capital}
             population={country.population}
           />
-        </Ancle>
+        </A>
       ))}
     </Countries>
   )
 }
 
-export default React.memo(CountriesContainer)
+export default memo(CountriesContainer)

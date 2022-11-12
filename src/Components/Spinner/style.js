@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+export const SpinnerContainer = styled.div`
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+`
+
 export const Loader = styled.svg`
   animation: rotate 2s linear infinite;
   width: 60px;

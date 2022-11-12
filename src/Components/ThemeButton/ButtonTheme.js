@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
+import { MoonIcon, SunIcon } from '../commons/icons'
 import { ThemeContext } from 'styled-components'
 import { ThemeHandler } from './style'
 
@@ -11,7 +12,7 @@ function ButtonTheme() {
 
   return (
     <ThemeHandler onClick={handleTheme}>
-      <i className={isLight ? 'fas fa-moon' : 'fas fa-sun'} />
+      {isLight ? <MoonIcon /> : <SunIcon/> }
       {isLight ? 'Dark Mode' : 'Light Mode'}
     </ThemeHandler>
   )

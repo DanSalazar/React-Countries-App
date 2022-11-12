@@ -1,36 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import CountriesContainer from '../../Components/CountriesContainer/CountriesContainer'
-import Form from '../../Components/Form/Form'
 import { AppContainer } from './style'
-import getCountries from '../../Services/getCountries'
-import countriesFilter from '../../Services/Filter'
+import useCountries from '../../hooks/useCountries'
+import Search from '../../Components/Search'
+import Spinner from '../../Components/Spinner/Spinner'
+import CountriesContainer from '../../Components/CountriesContainer/CountriesContainer'
 
 function Home() {
-  const [countries, setCountries] = useState([])
-  const [region, setRegion] = useState('')
-  const [name, setName] = useState('')
-
-  useEffect(() => {
-    getCountries().then(setCountries)
-  }, [])
-
-  const handleNameChange = (e) => {
-    setName(e.target.value)
-  }
-
-  const handleRegionChange = (value) => {
-    setRegion(value)
-  }
-
-  const filter = countriesFilter(countries, name, region)
+  const { data, handleName, handleRegion, loading } = useCountries()
 
   return (
     <AppContainer>
-      <Form
-        handleNameChange={handleNameChange}
-        handleRegionChange={handleRegionChange}
+      <Search
+        handleNameChange={handleName}
+        handleRegionChange={handleRegion}
       />
-      <CountriesContainer countries={filter} />
+      {loading ? <Spinner/> : <CountriesContainer countries={data} /> }
     </AppContainer>
   )
 }
